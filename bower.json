@@ -1,0 +1,23 @@
+{
+  "name": "smoh_2016",
+  "description": "Smoh website wordpress theme",
+  "main": "index.js",
+  "authors": [
+    "Simon Patrat"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

@@ -1,0 +1,31 @@
+// Variables (override bootstrap variables and creating some new)
+
+$brand-primary: #3fbbec;
+
+  //== Thumbnails
+//
+//##
+
+//** Padding around the thumbnail image
+$thumbnail-padding:           0;
+//** Thumbnail background color
+$thumbnail-bg:                transparent;
+
+//** Thumbnail border radius
+$thumbnail-border-radius:     0;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     #000;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:   9px;
+
+
+//** Glyphicons font path
+$icon-font-path: "fonts/bootstrap/";
+
+//** Global textual link color.
+$link-color:            #999999;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      $brand-primary;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
