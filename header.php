@@ -23,7 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wplayout' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner" style="background: url(<?php echo( get_header_image() ); ?>) no-repeat center fixed; background-size: cover;">
+	<header id="masthead" class="site-header" role="banner" style="background: url(<?php echo( get_header_image() ); ?>) no-repeat center fixed; background-size:cover;">
         <div class="container-fluid">
             <div class="row">
                 <nav id="site-navigation" class="main-navigation" role="navigation">
