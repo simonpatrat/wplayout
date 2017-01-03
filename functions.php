@@ -105,6 +105,9 @@ add_action( 'widgets_init', 'wplayout_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wplayout_scripts() {
+
+    wp_enqueue_style( 'wplayout-google-fonts', '//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i', false );
+
 	wp_enqueue_style( 'wplayout-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wplayout-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

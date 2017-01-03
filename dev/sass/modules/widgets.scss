@@ -1,0 +1,13 @@
+// Widgets
+
+// Widgets in sidebar
+#secondary {
+  margin-top: 30px;
+
+  .widget {
+    margin: 15px auto;
+    background: #fff;
+    box-shadow: 0 0 5px 0 rgba(#000, 0.1);
+    padding: 10px 15px;
+  }
+}
