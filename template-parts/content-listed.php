@@ -9,8 +9,11 @@
 
 ?>
 
-<div class="col-xs-12 col-sm-12 col-md-12 column-size">
+<div class="col-xs-12 col-sm-12 col-md-12 column-size content-listed">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <figure class="post-thumbnail-figure">
+            <?php the_post_thumbnail('post-item-thumb', array('class' => ' img-responsive')); ?>
+        </figure>
         <header class="entry-header">
             <?php
             if ( is_single() ) :

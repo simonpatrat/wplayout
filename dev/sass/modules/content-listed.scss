@@ -1,0 +1,29 @@
+// Content listed
+.col-md-12.content-listed {
+  .post-thumbnail-figure {
+    width: 20%;
+    float: left;
+    margin-right: 15px;
+  }
+
+  .entry-header {
+    width: calc(80% - 15px);
+    float: left;
+  }
+
+  .entry-title {
+    margin-top: 0;
+  }
+
+  .entry-content {
+    clear: both;
+    margin: 15px auto 0 auto;
+    padding: 15px 0;
+
+    &:before, &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+  }
+}
