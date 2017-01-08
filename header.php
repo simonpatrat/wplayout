@@ -28,7 +28,16 @@
             <div class="row">
                 <nav id="site-navigation" class="main-navigation" role="navigation">
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wplayout' ); ?></button>
-                    <?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+                    <?php
+                    /* Primary navigation */
+                            wp_nav_menu( array(
+                                    'menu'       => 'primary',
+                                    'depth'      => 2,
+                                    'container'  => false,
+                                    'menu_class' => 'nav navbar-nav',
+                                    'walker'     => new wp_bootstrap_navwalker())
+                            );
+                    ?>
                 </nav><!-- #site-navigation -->
             </div>
         </div>

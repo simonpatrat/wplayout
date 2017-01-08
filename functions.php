@@ -7,6 +7,9 @@
  * @package wplayout
  */
 
+// Register Bootstrap Navigation Walker
+include 'classes/wp_bootstrap_navwalker.php';
+
 if ( ! function_exists( 'wplayout_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -41,7 +44,7 @@ function wplayout_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-    add_image_size( 'post-item-thumb', 768, 438 );
+    add_image_size( 'post-item-thumb', 768, 9999,array( 'center', 'center' ), true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

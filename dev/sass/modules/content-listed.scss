@@ -1,18 +1,28 @@
 // Content listed
+.content-listed {
+  margin-top: 15px;
+
+  .thumbnail {
+    @media (max-width: $screen-xs-max) {
+      height: auto !important;
+    }
+  }
+
+}
+
 .col-md-12.content-listed {
+
+
   .post-thumbnail-figure {
-    width: 20%;
-    float: left;
-    margin-right: 15px;
+
   }
 
   .entry-header {
-    width: calc(80% - 15px);
-    float: left;
+
   }
 
   .entry-title {
-    margin-top: 0;
+
   }
 
   .entry-content {
