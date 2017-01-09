@@ -3,6 +3,9 @@
 (function($) {
 
 
+    $(window).on('load', function() {
+        setHeights('.column-size .thumbnail');
+    });
 
     $(document).on('click', '.post-change-layout-buttons .btn', function() {
         var nbColumns = $(this).data('columns');

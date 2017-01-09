@@ -1,6 +1,7 @@
 // Variables (override bootstrap variables and creating some new)
 
-$brand-primary: #3fbbec;
+//$brand-primary: #DAA520; // Gold
+$brand-primary: #008cba; // Blue
 
 $font-family-sans-serif:  'Roboto', sans-serif;
 $font-family-serif:       'Lora', serif;
@@ -27,8 +28,13 @@ $thumbnail-caption-padding:   9px;
 $icon-font-path: "fonts/bootstrap/";
 
 //** Global textual link color.
-$link-color:            #999999;
+$link-color:            $brand-primary;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      $brand-primary;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
+
+// Border radius
+$border-radius-base:        0;
+$border-radius-large:       0;
+$border-radius-small:       0;

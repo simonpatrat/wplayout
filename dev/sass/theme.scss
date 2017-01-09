@@ -1,1 +1,36 @@
 // Site theme
+.site-header {
+  position: relative;
+}
+
+.site-branding {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.site-title, .site-title a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: $font-family-serif;
+}
+
+.home .site-title {
+  font-size: 42px;
+}
+
+.site-description {
+  color: #fff;
+}
+
+.header-page-title {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: $font-family-serif;
+}
+

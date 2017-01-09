@@ -22,25 +22,33 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wplayout' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner" style="background: url(<?php echo( get_header_image() ); ?>) no-repeat center fixed; background-size:cover;">
-        <div class="container-fluid">
-            <div class="row">
-                <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wplayout' ); ?></button>
+    <div class="container-fluid site-navigation-container
+    <?php
+        if ( is_admin_bar_showing() ) {
+            echo ' admin-bar-is-showing ';
+        }
+    ?>">
+        <div class="row">
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                <div class="navbar-header"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand navbar-link"><?php bloginfo( 'name' ); ?></a>
+                    <button data-toggle="collapse" data-target="#main-navbar-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div id="main-navbar-collapse" class="collapse navbar-collapse">
                     <?php
                     /* Primary navigation */
-                            wp_nav_menu( array(
-                                    'menu'       => 'primary',
-                                    'depth'      => 2,
-                                    'container'  => false,
-                                    'menu_class' => 'nav navbar-nav',
-                                    'walker'     => new wp_bootstrap_navwalker())
-                            );
+                    wp_nav_menu( array(
+                            'menu'       => 'primary',
+                            'depth'      => 2,
+                            'container'  => false,
+                            'menu_class' => 'nav navbar-nav navbar-right',
+                            'walker'     => new wp_bootstrap_navwalker())
+                    );
                     ?>
-                </nav><!-- #site-navigation -->
-            </div>
+                </div>
+            </nav><!-- #site-navigation -->
         </div>
+    </div>
+	<header id="masthead" class="site-header" role="banner" style="background: url(<?php echo( get_header_image() ); ?>) no-repeat center fixed; background-size:cover;">
 
         <div class="container">
             <div class="row">
@@ -49,12 +57,12 @@
                     if ( is_front_page() && is_home() ) : ?>
                         <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
                     <?php else : ?>
-                        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                        <h1 class="header-page-title text-left"><?php the_title(); ?></h1>
                         <?php
                     endif;
 
                     $description = get_bloginfo( 'description', 'display' );
-                    if ( $description || is_customize_preview() ) : ?>
+                    if ( ($description || is_customize_preview()) && is_home() ) : ?>
                         <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
                         <?php
                     endif; ?>

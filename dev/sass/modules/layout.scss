@@ -6,7 +6,12 @@
 }
 
 // #masthead
+#masthead {
+  height: 40vh;
+  max-height: 530px;
+}
+
 .home #masthead {
-  height: 70vh;
-  max-height: 680px;
+  height: 85vh;
+  max-height: 780px;
 }
