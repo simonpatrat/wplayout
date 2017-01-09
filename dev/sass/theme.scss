@@ -34,3 +34,11 @@
   font-family: $font-family-serif;
 }
 
+
+// Site content
+.site-content {
+  z-index: 2;
+  position: relative;
+  overflow-x: hidden;
+
+}
